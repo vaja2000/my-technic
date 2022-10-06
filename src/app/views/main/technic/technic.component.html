@@ -1,0 +1,23 @@
+<mat-stepper linear #stepper>
+  <mat-step>
+    <ng-template matStepLabel>კატეგორიები</ng-template>
+    <div class="categories">
+      <ul class="menu">
+        <li *ngFor="let category of categories">
+          {{category}}
+          <mat-icon>navigate_next</mat-icon>
+        </li>
+      </ul>
+      <div class="image">
+        <img src="https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?cs=srgb&dl=pexels-drew-williams-3568520.jpg&fm=jpg" alt="">
+      </div>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Fill out your address</ng-template>
+    <div></div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+  </mat-step>
+</mat-stepper>

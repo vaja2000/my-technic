@@ -12,23 +12,45 @@ import { FooterComponent } from './views/footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from "@angular/material/tabs";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatStepperModule } from '@angular/material/stepper';
+import { HomeComponent } from './views/main/home/home.component';
+import { TechnicComponent } from './views/main/technic/technic.component';
+import { AboutUsComponent } from './views/main/about-us/about-us.component';
+import { ContactComponent } from './views/main/contact/contact.component';
+import { MenuComponent } from './views/main/technic/menu/menu.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    TechnicComponent,
+    AboutUsComponent,
+    ContactComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    
+
     //material
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatBadgeModule,
+    MatStepperModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

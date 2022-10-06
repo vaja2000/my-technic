@@ -1,10 +1,10 @@
 <mat-toolbar>
-    <div>
+    <div class="content">
         <button mat-button color="primary">
             <mat-icon>call</mat-icon>
             <span>+995 85 65 45</span>
         </button>
-        <a mat-icon-button color="primary" 
+        <a mat-icon-button color="primary"
         href="https://www.facebook.com/"
         target="_blank">
             <mat-icon class="mat-18">facebook</mat-icon>
@@ -18,9 +18,49 @@
         </button>
     </div>
 </mat-toolbar>
-<nav mat-tab-nav-bar background="">
-    <a> </a>
-    <a mat-tab-link disabled>Disabled Link</a>
-  </nav>
-  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-  
+<nav>
+  <div class="content">
+    <section class="menu">
+      <ul>
+        <section
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}">
+          <li
+            routerLink="/"
+          >მთავარი</li>
+        </section>
+        <section
+        routerLinkActive="active">
+          <li
+            routerLink="/technic"
+          >ტექნიკა</li>
+        </section>
+        <section
+        routerLinkActive="active">
+          <li
+            routerLink="/about-us"
+          >ჩვენს შესახებ</li>
+        </section>
+        <section
+        routerLinkActive="active">
+          <li
+            routerLink="/contact"
+          >კონტაქტი</li>
+        </section>
+      </ul>
+    </section>
+    <section class="cart-favorites">
+      <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+      <mat-icon matBadge="15" matBadgeColor="warn">favorite</mat-icon>
+    </section>
+    <section class="search">
+      <section [ngStyle]="{ width: search? '100%' : '66px' }">
+        <input type="text" [ngStyle]="{ display: search? '' : 'none' }">
+        <button mat-fab color="primary"
+        (click)="searchClick()">
+          <mat-icon>search</mat-icon>
+        </button>
+      </section>
+    </section>
+  </div>
+</nav>
