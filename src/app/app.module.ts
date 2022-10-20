@@ -17,12 +17,15 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatStepperModule } from '@angular/material/stepper';
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
 import { HomeComponent } from './views/main/home/home.component';
 import { TechnicComponent } from './views/main/technic/technic.component';
 import { AboutUsComponent } from './views/main/about-us/about-us.component';
 import { ContactComponent } from './views/main/contact/contact.component';
-import { MenuComponent } from './views/main/technic/menu/menu.component';
-import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,7 +37,6 @@ import {ReactiveFormsModule} from "@angular/forms";
     TechnicComponent,
     AboutUsComponent,
     ContactComponent,
-    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatInputModule,
     MatBadgeModule,
     MatStepperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

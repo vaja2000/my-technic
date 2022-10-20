@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-technic',
@@ -9,10 +10,15 @@ export class TechnicComponent implements OnInit {
 
   categories:string[] = [
     "ტელეფონები", "ტელეფონის აქსესუარები", "კომპიუტერები", "კომპიუტერის კომპონენტები",
-    "კომპიუტერის აქსეუარები", "მონიტორები", "კაბელები,ადაპტერები"
+    "კომპიუტერის აქსეუარები", "მონიტორები", "კაბელები,ადაპტერები",
   ]
+  toppings = this._formBuilder.group({
+    pepperoni: false,
+    extracheese: false,
+    mushroom: false,
+  });
 
-  constructor() { }
+  constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
