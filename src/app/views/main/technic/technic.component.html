@@ -2,49 +2,16 @@
 <!--  categories-->
   <mat-step>
     <ng-template matStepLabel>კატეგორიები</ng-template>
-    <div>
-      <ul>
-        <li *ngFor="let category of categories">
-          {{category}}
-          <mat-icon>navigate_next</mat-icon>
-        </li>
-      </ul>
-      <section class="image">
-        <img src="https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?cs=srgb&dl=pexels-drew-williams-3568520.jpg&fm=jpg" alt="">
-      </section>
-    </div>
+    <app-categories></app-categories>
   </mat-step>
 <!--  more-->
   <mat-step>
     <ng-template matStepLabel>დაწვრილებით</ng-template>
-    <div class="more">
-      <ul>
-        <title>ტელეფონები</title>
-        <table>
-          <li *ngFor="let category of categories">
-            {{category}}
-          </li>
-        </table>
-      </ul>
-      <section class="image">
-        <img src="https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?cs=srgb&dl=pexels-drew-williams-3568520.jpg&fm=jpg" alt="">
-      </section>
-    </div>
+    <app-details></app-details>
   </mat-step>
+<!--  product-->
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <div class="products">
-      <ul class="filter">
-        <section class="example-section" [formGroup]="toppings">
-          <h4>მწარმოებელი</h4>
-          <p><mat-checkbox color="primary" formControlName="pepperoni">asus</mat-checkbox></p>
-          <p><mat-checkbox color="primary" formControlName="extracheese">hp</mat-checkbox></p>
-          <p><mat-checkbox color="primary" formControlName="mushroom">Lenovo</mat-checkbox></p>
-        </section>
-      </ul>
-      <fieldset class="product_cards">
-        <section></section>
-      </fieldset>
-    </div>
+    <ng-template matStepLabel>პროდუქტი</ng-template>
+    <app-result></app-result>
   </mat-step>
 </mat-stepper>
