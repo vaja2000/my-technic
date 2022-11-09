@@ -1,6 +1,7 @@
 .products {
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
   ul {
     padding: 0px 20px 20px 20px;
     width: 20%;
@@ -31,6 +32,10 @@
       height: 370px;
       background-color: rgb(245, 245, 245);
       border-radius: 10px;
+      transition: .2s linear;
+      &:hover {
+        box-shadow: 0px 5px 15px #d9d9d9;
+      }
       .image {
         width: 100%;
         height: 50%;
@@ -48,9 +53,10 @@
       }
       .sliderBtns {
         position: absolute;
+        overflow: hidden;
         width: 300px;
         height: 185px;
-        display: flex;
+        display: none;
         align-items: flex-end;
         flex-wrap: wrap;
         .prev_next,.imgPage {
@@ -66,7 +72,14 @@
             cursor: pointer;
             background-color: rgb(255, 255, 255);
             border: none;
-            margin: 5px;
+            margin: 5px -50px;
+            animation-name: show;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+            @keyframes show {
+              0% { margin: 5px -50px; }
+              100% { margin: 5px; }
+            }
           }
         }
         .imgPage {
@@ -79,11 +92,19 @@
             border-radius: 50%;
             border: 2px solid rgb(63, 81, 181);
             background-color: unset;
+            margin-top: 30px;
             cursor: pointer;
             transition: .10s linear;
+            animation-name: bottom;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
             &:hover {
               border: 2px solid rgb(255, 255, 255);
               background-color: rgb(63, 81, 181);
+            }
+            @keyframes bottom {
+              0% { margin-top: 30px; }
+              100% { margin-top: 0px; }
             }
           }
           .activePage {
@@ -92,6 +113,9 @@
             background-color: rgb(63, 81, 181);
           }
         }
+      }
+      &:hover .sliderBtns {
+        display: flex;
       }
     }
   }

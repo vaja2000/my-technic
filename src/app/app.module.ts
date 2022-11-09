@@ -29,7 +29,6 @@ import { ContactComponent } from './views/main/contact/contact.component';
 import { CategoriesComponent } from './views/main/technic/categories/categories.component';
 import { DetailsComponent } from './views/main/technic/details/details.component';
 import { ResultComponent } from './views/main/technic/result/result.component';
-import { DisplayDirective } from './directive/display.directive';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { DisplayDirective } from './directive/display.directive';
     CategoriesComponent,
     DetailsComponent,
     ResultComponent,
-    DisplayDirective,
   ],
   imports: [
     BrowserModule,
