@@ -29,6 +29,7 @@ import { ContactComponent } from './views/main/contact/contact.component';
 import { CategoriesComponent } from './views/main/technic/categories/categories.component';
 import { DetailsComponent } from './views/main/technic/details/details.component';
 import { ResultComponent } from './views/main/technic/result/result.component';
+import { NavbarScrollAnimationDirective } from './directives/navbar-scroll-animation.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ResultComponent } from './views/main/technic/result/result.component';
     CategoriesComponent,
     DetailsComponent,
     ResultComponent,
+    NavbarScrollAnimationDirective,
   ],
   imports: [
     BrowserModule,
